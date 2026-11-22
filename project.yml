@@ -1,0 +1,162 @@
+name: FitTrack
+options:
+  bundleIdPrefix: com.sabri68
+  deploymentTarget:
+    iOS: "18.0"
+    watchOS: "11.0"
+  developmentLanguage: fr
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: false
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_STRICT_CONCURRENCY: minimal
+    ENABLE_PREVIEWS: YES
+    DEAD_CODE_STRIPPING: YES
+
+targets:
+  FitTrack:
+    type: application
+    platform: iOS
+    sources:
+      - path: iOS
+        excludes:
+          - "Info.plist"
+          - "*.entitlements"
+      - path: Shared
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: FitTrack
+        CFBundleDevelopmentRegion: fr
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiredDeviceCapabilities:
+          - arm64
+        ITSAppUsesNonExemptEncryption: false
+        NSHealthShareUsageDescription: "FitTrack lit votre poids, votre énergie active, votre fréquence cardiaque, vos pas et vos entraînements afin d'afficher vos progrès et d'ajuster vos objectifs."
+        NSHealthUpdateUsageDescription: "FitTrack enregistre vos séances de musculation, votre poids et vos apports nutritionnels dans l'app Santé."
+        NSCameraUsageDescription: "FitTrack utilise l'appareil photo pour scanner les codes-barres des aliments et photographier vos repas."
+        NSPhotoLibraryUsageDescription: "FitTrack accède à vos photos uniquement lorsque vous choisissez une photo de repas à analyser."
+    entitlements:
+      path: iOS/FitTrack.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack
+        PRODUCT_NAME: FitTrack
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+    dependencies:
+      - target: FitTrackWatch
+        embed: true
+        codeSign: true
+        copy:
+          destination: productsDirectory
+          subpath: $(CONTENTS_FOLDER_PATH)/Watch
+      - sdk: HealthKit.framework
+      - sdk: WatchConnectivity.framework
+    scheme:
+      testTargets:
+        - FitTrackTests
+        - FitTrackUITests
+      gatherCoverageData: false
+
+  FitTrackWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - path: Watch
+        excludes:
+          - "Info.plist"
+          - "*.entitlements"
+      - path: Shared
+    info:
+      path: Watch/Info.plist
+      properties:
+        CFBundleDisplayName: FitTrack
+        CFBundleDevelopmentRegion: fr
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.sabri68.fittrack
+        WKBackgroundModes:
+          - workout-processing
+        NSHealthShareUsageDescription: "FitTrack lit votre fréquence cardiaque et votre énergie active pendant vos séances."
+        NSHealthUpdateUsageDescription: "FitTrack enregistre vos séances de musculation dans l'app Santé."
+    entitlements:
+      path: Watch/FitTrackWatch.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.watchkitapp
+        PRODUCT_NAME: FitTrackWatch
+        TARGETED_DEVICE_FAMILY: "4"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SKIP_INSTALL: YES
+    dependencies:
+      - sdk: HealthKit.framework
+      - sdk: WatchConnectivity.framework
+    scheme:
+      testTargets:
+        - FitTrackWatchTests
+      gatherCoverageData: false
+
+  FitTrackTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/FitTrackTests
+    dependencies:
+      - target: FitTrack
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.tests
+
+  FitTrackUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Tests/FitTrackUITests
+    dependencies:
+      - target: FitTrack
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.uitests
+        TEST_TARGET_NAME: FitTrack
+
+  FitTrackWatchTests:
+    type: bundle.unit-test
+    platform: watchOS
+    sources:
+      - path: Tests/FitTrackWatchTests
+    dependencies:
+      - target: FitTrackWatch
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.watchkitapp.tests

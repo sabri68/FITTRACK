@@ -1,0 +1,136 @@
+name: Build & Test (iOS + watchOS)
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    timeout-minutes: 75
+    env:
+      DD: ${{ github.workspace }}/build/DerivedData
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select newest stable Xcode
+        run: |
+          ls -d /Applications/Xcode*.app
+          XC=$(ls -d /Applications/Xcode_*.app | grep -vi -E 'beta|rc' | sort -V | tail -1)
+          sudo xcode-select -s "$XC"
+          xcodebuild -version
+          sw_vers
+
+      - name: Install XcodeGen and generate project
+        run: |
+          brew install xcodegen
+          xcodegen --version
+          xcodegen generate
+
+      - name: Create simulators
+        run: |
+          xcrun simctl list runtimes
+          ./scripts/ci_simulators.sh | tee sims.env
+          cat sims.env >> "$GITHUB_ENV"
+
+      - name: Build iOS app (with embedded Watch app)
+        run: |
+          set -o pipefail
+          xcodebuild -project FitTrack.xcodeproj -scheme FitTrack -configuration Debug \
+            -destination "generic/platform=iOS Simulator" -derivedDataPath "$DD" \
+            build 2>&1 | tee build-ios.log | grep -E "error:|warning:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" build-ios.log
+
+      - name: Build watchOS app
+        run: |
+          set -o pipefail
+          xcodebuild -project FitTrack.xcodeproj -scheme FitTrackWatch -configuration Debug \
+            -destination "generic/platform=watchOS Simulator" -derivedDataPath "$DD" \
+            build 2>&1 | tee build-watch.log | grep -E "error:|warning:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" build-watch.log
+
+      - name: Verify Watch app is embedded in iPhone app
+        run: |
+          APP="$DD/Build/Products/Debug-iphonesimulator/FitTrack.app"
+          ls "$APP/Watch"
+          test -d "$APP/Watch/FitTrackWatch.app"
+          /usr/libexec/PlistBuddy -c "Print :WKCompanionAppBundleIdentifier" "$APP/Watch/FitTrackWatch.app/Info.plist"
+
+      - name: Unit + UI tests on iPhone 15 simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project FitTrack.xcodeproj -scheme FitTrack \
+            -destination "id=$IPHONE_UDID" -derivedDataPath "$DD" \
+            -resultBundlePath build/ios-tests.xcresult \
+            test 2>&1 | tee test-ios.log | grep -E "error:|Test Case .* (passed|failed)|Executed|TEST (SUCCEEDED|FAILED)|\*\* TEST" || true
+          grep -q "TEST SUCCEEDED" test-ios.log
+
+      - name: Unit tests on Apple Watch simulator
+        run: |
+          set -o pipefail
+          xcodebuild -project FitTrack.xcodeproj -scheme FitTrackWatch \
+            -destination "id=$WATCH_UDID" -derivedDataPath "$DD" \
+            -resultBundlePath build/watch-tests.xcresult \
+            test 2>&1 | tee test-watch.log | grep -E "error:|Test Case .* (passed|failed)|Executed|\*\* TEST" || true
+          grep -q "TEST SUCCEEDED" test-watch.log
+
+      - name: Export UI test screenshots
+        if: always()
+        run: |
+          mkdir -p build/screenshots
+          if [ -d build/ios-tests.xcresult ]; then
+            xcrun xcresulttool export attachments --path build/ios-tests.xcresult --output-path build/screenshots || true
+          fi
+          ls build/screenshots | head -50
+
+      - name: Probe Vision classifier labels
+        if: always()
+        continue-on-error: true
+        run: swift scripts/vision_labels.swift > build/vision-labels.txt 2>&1; head -3 build/vision-labels.txt
+
+      - name: Upload logs and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-logs
+          path: |
+            *.log
+            build/screenshots
+            build/vision-labels.txt
+          if-no-files-found: ignore
+
+      - name: Commit generated Xcode project
+        if: success() && github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add FitTrack.xcodeproj iOS/Info.plist Watch/Info.plist iOS/FitTrack.entitlements Watch/FitTrackWatch.entitlements
+          if git diff --cached --quiet; then
+            echo "Xcode project already up to date"
+          else
+            git commit -m "chore: regenerate Xcode project (verified build)"
+            git push origin HEAD:${GITHUB_REF_NAME} || echo "Push skipped (branch moved)"
+          fi
+
+      - name: Package project ZIP
+        if: success()
+        run: |
+          rm -rf build/DerivedData
+          mkdir -p dist
+          zip -r -q dist/FITTRACK.zip . -x ".git/*" "build/*" "dist/*" "*.log" "sims.env"
+          ls -lh dist
+
+      - name: Upload project ZIP
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: FITTRACK-project
+          path: dist/FITTRACK.zip
