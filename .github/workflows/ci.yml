@@ -122,7 +122,7 @@ jobs:
           for f in build-ios.log build-watch.log build-icloud.log test-ios.log test-watch.log; do
             [ -f "$f" ] || continue
             echo "===== $f ====="
-            grep -E "error:|: error|failed|XCTAssert|Fatal|crash|Testing failed|warning: .*(deprecated|never|unused)" "$f" | grep -v "^\s*$" | sort -u | head -80
+            grep -E "error:|: error|failed|XCTAssert|Fatal|crash|Testing failed|warning: .*(deprecated|never|unused)" "$f" | grep -v "CoreData:" | grep -v "^\s*$" | sort -u | head -80
           done
 
       - name: Upload logs and screenshots

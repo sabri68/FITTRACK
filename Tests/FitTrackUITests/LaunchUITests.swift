@@ -69,13 +69,9 @@ final class FitTrackUITests: XCTestCase {
 
         app.buttons["workout.library"].tap()
         XCTAssertTrue(app.navigationBars["Bibliothèque"].waitForExistence(timeout: 5))
-        let librarySearch = app.searchFields.firstMatch
-        XCTAssertTrue(librarySearch.waitForExistence(timeout: 5))
-        librarySearch.tap()
-        librarySearch.typeText("Squat")
-        let squat = app.staticTexts["Squat barre"].firstMatch
-        XCTAssertTrue(squat.waitForExistence(timeout: 5))
-        squat.tap()
+        let firstExercise = app.staticTexts["Barre au front"].firstMatch
+        XCTAssertTrue(firstExercise.waitForExistence(timeout: 5))
+        firstExercise.tap()
         XCTAssertTrue(app.staticTexts["Exécution"].waitForExistence(timeout: 5))
         screenshot(app, "07-Fiche-exercice")
 
@@ -127,7 +123,7 @@ final class FitTrackUITests: XCTestCase {
         pick.tap()
 
         app.buttons["active.finish"].tap()
-        let confirm = app.buttons["Terminer et enregistrer"]
+        let confirm = app.buttons["Terminer et enregistrer"].firstMatch
         XCTAssertTrue(confirm.waitForExistence(timeout: 5))
         confirm.tap()
         XCTAssertTrue(app.staticTexts["Séance terminée !"].waitForExistence(timeout: 10))

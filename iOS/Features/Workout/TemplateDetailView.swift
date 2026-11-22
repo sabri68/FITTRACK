@@ -186,7 +186,7 @@ struct ExercisePickerView: View {
                 .buttonStyle(.plain)
                 .accessibilityIdentifier("pick.\(exercise.id)")
             }
-            .searchable(text: $query, prompt: "Rechercher un exercice")
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Rechercher un exercice")
             .navigationTitle("Ajouter un exercice")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -208,7 +208,7 @@ struct ExerciseLibraryView: View {
                 ExerciseRow(exercise: exercise)
             }
         }
-        .searchable(text: $query, prompt: "Rechercher un exercice")
+        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Rechercher un exercice")
         .navigationTitle("Bibliothèque")
     }
 }
