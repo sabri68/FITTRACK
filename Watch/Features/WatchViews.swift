@@ -271,6 +271,15 @@ struct WatchSetTrackerView: View {
                     }
                     .tint(set.isCompleted ? .gray : WatchTheme.positive)
                     .accessibilityIdentifier("watch.completeSet")
+                    if session.completedSets.count == exercises.flatMap(\.orderedSets).count {
+                        Button {
+                            Task { await model.finish(session) }
+                        } label: {
+                            Label("Terminer la séance", systemImage: "flag.checkered")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .tint(WatchTheme.accent)
+                    }
                 }
             }
         }

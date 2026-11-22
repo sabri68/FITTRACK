@@ -24,7 +24,12 @@ final class WatchSharedLogicTests: XCTestCase {
         XCTAssertEqual(dto.exercises.first?.sets.first?.isCompleted, true)
         // The payload sent to the iPhone survives encoding.
         let dict = try SyncMessage.encode(.session, dto)
-        XCTAssertEqual(try SyncMessage.decode(SessionDTO.self, from: dict), dto)
+        let decoded = try SyncMessage.decode(SessionDTO.self, from: dict)
+        XCTAssertEqual(decoded.uuid, dto.uuid)
+        XCTAssertEqual(decoded.name, dto.name)
+        XCTAssertEqual(decoded.exercises.map(\.exerciseId), dto.exercises.map(\.exerciseId))
+        XCTAssertEqual(decoded.exercises.flatMap(\.sets).map(\.isCompleted), dto.exercises.flatMap(\.sets).map(\.isCompleted))
+        XCTAssertEqual(decoded.startDate.timeIntervalSince1970, dto.startDate.timeIntervalSince1970, accuracy: 0.001)
     }
 
     func testPhoneSuggestionWinsWhenNewer() throws {

@@ -37,9 +37,13 @@ final class FitTrackWatchUITests: XCTestCase {
         screenshot(app, "W3-Repos-montre")
         skip.tap()
 
-        app.swipeRight()
+        // Go to the controls page (left of the set tracker).
         let finish = app.buttons["watch.finish"]
-        XCTAssertTrue(finish.waitForExistence(timeout: 5))
+        for _ in 0..<3 where !finish.waitForExistence(timeout: 2) {
+            let title = app.staticTexts.firstMatch
+            if title.exists { title.swipeRight() } else { app.swipeRight() }
+        }
+        XCTAssertTrue(finish.waitForExistence(timeout: 5), "Le bouton Terminer doit être accessible")
         finish.tap()
 
         let ok = app.buttons["watch.summaryOK"]
