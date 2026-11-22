@@ -24,10 +24,28 @@ enum Persistence {
     /// UI tests launch the app with this argument to use a fresh in-memory store.
     static var isUITesting: Bool { ProcessInfo.processInfo.arguments.contains("-uiTesting") }
 
+    /// UI tests that check persistence across launches use an on-disk test store.
+    static var isUITestingOnDisk: Bool { ProcessInfo.processInfo.arguments.contains("-uiTestingDisk") }
+
+    static var isAnyUITest: Bool { isUITesting || isUITestingOnDisk }
+
+    private static var uiTestStoreURL: URL {
+        URL.temporaryDirectory.appending(path: "FitTrackUITest.store")
+    }
+
     static func makeContainer(inMemory: Bool = false) throws -> ModelContainer {
         let configuration: ModelConfiguration
         if inMemory {
             configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true, cloudKitDatabase: .none)
+        } else if isUITestingOnDisk {
+            if ProcessInfo.processInfo.arguments.contains("-resetStore") {
+                let dir = uiTestStoreURL.deletingLastPathComponent()
+                let files = (try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil)) ?? []
+                for file in files where file.lastPathComponent.hasPrefix("FitTrackUITest.store") {
+                    try? FileManager.default.removeItem(at: file)
+                }
+            }
+            configuration = ModelConfiguration(schema: schema, url: uiTestStoreURL, cloudKitDatabase: .none)
         } else if isICloudSyncCompiledIn {
             configuration = ModelConfiguration(schema: schema, cloudKitDatabase: .private(iCloudContainerIdentifier))
         } else {

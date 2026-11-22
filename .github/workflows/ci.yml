@@ -67,6 +67,8 @@ jobs:
       - name: Unit + UI tests on iPhone 15 simulator
         run: |
           set -o pipefail
+          xcrun simctl boot "$IPHONE_UDID" || true
+          xcrun simctl bootstatus "$IPHONE_UDID" -b || true
           xcodebuild -project FitTrack.xcodeproj -scheme FitTrack \
             -destination "id=$IPHONE_UDID" -derivedDataPath "$DD" \
             -resultBundlePath build/ios-tests.xcresult \
@@ -75,28 +77,44 @@ jobs:
 
       - name: Unit tests on Apple Watch simulator
         run: |
-          set -o pipefail
-          xcodebuild -project FitTrack.xcodeproj -scheme FitTrackWatch \
-            -destination "id=$WATCH_UDID" -derivedDataPath "$DD" \
-            -resultBundlePath build/watch-tests.xcresult \
-            test 2>&1 | tee test-watch.log | grep -E "error:|Test Case .* (passed|failed)|Executed|\*\* TEST" || true
-          grep -q "TEST SUCCEEDED" test-watch.log
+          xcrun simctl boot "$WATCH_UDID" || true
+          xcrun simctl bootstatus "$WATCH_UDID" -b || true
+          for attempt in 1 2; do
+            rm -rf build/watch-tests.xcresult
+            xcodebuild -project FitTrack.xcodeproj -scheme FitTrackWatch \
+              -destination "id=$WATCH_UDID" -derivedDataPath "$DD" \
+              -resultBundlePath build/watch-tests.xcresult \
+              test > test-watch.log 2>&1 || true
+            grep -E "error:|Test Case .* (passed|failed)|Executed|\*\* TEST" test-watch.log || true
+            if grep -q "TEST SUCCEEDED" test-watch.log; then exit 0; fi
+            if grep -q "Test Case .* failed" test-watch.log; then exit 1; fi
+            echo "Watch simulator launch problem, retrying ($attempt)"
+            xcrun simctl shutdown "$WATCH_UDID" || true
+            xcrun simctl boot "$WATCH_UDID" || true
+            xcrun simctl bootstatus "$WATCH_UDID" -b || true
+          done
+          exit 1
 
       - name: Export UI test screenshots
         if: always()
         run: |
           mkdir -p build/screenshots
-          if [ -d build/ios-tests.xcresult ]; then
-            xcrun xcresulttool export attachments --path build/ios-tests.xcresult --output-path build/screenshots || true
-          fi
+          for r in ios-tests watch-tests; do
+            if [ -d build/$r.xcresult ]; then
+              mkdir -p build/screenshots/$r
+              xcrun xcresulttool export attachments --path build/$r.xcresult --output-path build/screenshots/$r > /dev/null 2>&1 || true
+            fi
+          done
           ls build/screenshots | head -50
 
-      - name: Probe Vision classifier labels
-        if: always()
-        continue-on-error: true
+      - name: Failure summary
+        if: failure()
         run: |
-          swift scripts/vision_labels.swift > build/vision-labels.txt 2>&1
-          echo "VISION_LABELS: $(tr '\n' ',' < build/vision-labels.txt)"
+          for f in build-ios.log build-watch.log test-ios.log test-watch.log; do
+            [ -f "$f" ] || continue
+            echo "===== $f ====="
+            grep -E "error:|: error|failed|XCTAssert|Fatal|crash|Testing failed|warning: .*(deprecated|never|unused)" "$f" | grep -v "^\s*$" | sort -u | head -80
+          done
 
       - name: Upload logs and screenshots
         if: always()
@@ -114,7 +132,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python3 scripts/collect_screenshots.py build/screenshots docs/screenshots
+          python3 scripts/collect_screenshots.py build/screenshots/ios-tests docs/screenshots --clean
+          python3 scripts/collect_screenshots.py build/screenshots/watch-tests docs/screenshots
           git add FitTrack.xcodeproj iOS/Info.plist Watch/Info.plist iOS/FitTrack.entitlements Watch/FitTrackWatch.entitlements
           git add -A docs/screenshots 2>/dev/null || true
           if git diff --cached --quiet; then

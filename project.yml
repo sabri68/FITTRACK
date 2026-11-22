@@ -122,6 +122,7 @@ targets:
     scheme:
       testTargets:
         - FitTrackWatchTests
+        - FitTrackWatchUITests
       gatherCoverageData: false
 
   FitTrackTests:
@@ -160,3 +161,16 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.watchkitapp.tests
+
+  FitTrackWatchUITests:
+    type: bundle.ui-testing
+    platform: watchOS
+    sources:
+      - path: Tests/FitTrackWatchUITests
+    dependencies:
+      - target: FitTrackWatch
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.watchkitapp.uitests
+        TEST_TARGET_NAME: FitTrackWatch
