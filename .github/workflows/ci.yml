@@ -94,7 +94,9 @@ jobs:
       - name: Probe Vision classifier labels
         if: always()
         continue-on-error: true
-        run: swift scripts/vision_labels.swift > build/vision-labels.txt 2>&1; head -3 build/vision-labels.txt
+        run: |
+          swift scripts/vision_labels.swift > build/vision-labels.txt 2>&1
+          echo "VISION_LABELS: $(tr '\n' ',' < build/vision-labels.txt)"
 
       - name: Upload logs and screenshots
         if: always()
@@ -112,7 +114,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 scripts/collect_screenshots.py build/screenshots docs/screenshots
           git add FitTrack.xcodeproj iOS/Info.plist Watch/Info.plist iOS/FitTrack.entitlements Watch/FitTrackWatch.entitlements
+          git add -A docs/screenshots 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Xcode project already up to date"
           else
