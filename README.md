@@ -7,6 +7,16 @@ FitTrack is a native iPhone and Apple Watch fitness app for strength training an
 
 No third-party dependencies. No paid service is required.
 
+## Screenshots
+
+These screenshots were captured automatically by the UI tests on the iPhone 15 and Apple Watch Series 11 simulators.
+
+| Dashboard | Live workout | Food journal | Watch |
+|---|---|---|---|
+| ![](docs/screenshots/04-Accueil.png) | ![](docs/screenshots/11-Seance-en-cours.png) | ![](docs/screenshots/15-Journal.png) | ![](docs/screenshots/W2-Serie-montre.png) |
+
+All screenshots are in [`docs/screenshots/`](docs/screenshots).
+
 ---
 
 ## 1. Install on your iPhone and Apple Watch (free Apple ID)
