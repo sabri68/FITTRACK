@@ -1,0 +1,7 @@
+FITTRACK.zip
+build/
+dist/
+*.log
+sims.env
+xcuserdata/
+.DS_Store
