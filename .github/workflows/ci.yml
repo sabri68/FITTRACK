@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -56,6 +56,15 @@ jobs:
             -destination "generic/platform=watchOS Simulator" -derivedDataPath "$DD" \
             build 2>&1 | tee build-watch.log | grep -E "error:|warning:|BUILD (SUCCEEDED|FAILED)" || true
           grep -q "BUILD SUCCEEDED" build-watch.log
+
+      - name: Build iCloud variant (compile check of the CloudKit code path)
+        run: |
+          set -o pipefail
+          xcodebuild -project FitTrack.xcodeproj -scheme "FitTrack iCloud" -configuration Debug-iCloud \
+            -destination "generic/platform=iOS Simulator" -derivedDataPath "$DD-icloud" \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build-icloud.log | grep -E "error:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" build-icloud.log
+          rm -rf "$DD-icloud"
 
       - name: Verify Watch app is embedded in iPhone app
         run: |
@@ -110,7 +119,7 @@ jobs:
       - name: Failure summary
         if: failure()
         run: |
-          for f in build-ios.log build-watch.log test-ios.log test-watch.log; do
+          for f in build-ios.log build-watch.log build-icloud.log test-ios.log test-watch.log; do
             [ -f "$f" ] || continue
             echo "===== $f ====="
             grep -E "error:|: error|failed|XCTAssert|Fatal|crash|Testing failed|warning: .*(deprecated|never|unused)" "$f" | grep -v "^\s*$" | sort -u | head -80

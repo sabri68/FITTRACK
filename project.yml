@@ -9,6 +9,12 @@ options:
   groupSortPosition: top
   generateEmptyDirectories: false
 
+configs:
+  Debug: debug
+  Release: release
+  Debug-iCloud: debug
+  Release-iCloud: release
+
 settings:
   base:
     SWIFT_VERSION: "5.0"
@@ -47,6 +53,8 @@ targets:
           - UIInterfaceOrientationPortrait
         UIRequiredDeviceCapabilities:
           - arm64
+        UIBackgroundModes:
+          - remote-notification
         ITSAppUsesNonExemptEncryption: false
         NSHealthShareUsageDescription: "FitTrack lit votre poids, votre énergie active, votre fréquence cardiaque, vos pas et vos entraînements afin d'afficher vos progrès et d'ajuster vos objectifs."
         NSHealthUpdateUsageDescription: "FitTrack enregistre vos séances de musculation, votre poids et vos apports nutritionnels dans l'app Santé."
@@ -66,6 +74,13 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         SUPPORTS_MACCATALYST: NO
         SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+      configs:
+        Debug-iCloud:
+          CODE_SIGN_ENTITLEMENTS: iOS/FitTrack-iCloud.entitlements
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) FITTRACK_ICLOUD"
+        Release-iCloud:
+          CODE_SIGN_ENTITLEMENTS: iOS/FitTrack-iCloud.entitlements
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) FITTRACK_ICLOUD"
     dependencies:
       - target: FitTrackWatch
         embed: true
@@ -174,3 +189,19 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.sabri68.fittrack.watchkitapp.uitests
         TEST_TARGET_NAME: FitTrackWatch
+
+schemes:
+  FitTrack iCloud:
+    build:
+      targets:
+        FitTrack: all
+    run:
+      config: Debug-iCloud
+    test:
+      config: Debug-iCloud
+    profile:
+      config: Release-iCloud
+    analyze:
+      config: Debug-iCloud
+    archive:
+      config: Release-iCloud
