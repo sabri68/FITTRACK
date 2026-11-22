@@ -50,6 +50,17 @@
                ReferencedContainer = "container:FitTrack.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EC1EA7CA7422D0E54864C435"
+               BuildableName = "FitTrackWatchUITests.xctest"
+               BlueprintName = "FitTrackWatchUITests"
+               ReferencedContainer = "container:FitTrack.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

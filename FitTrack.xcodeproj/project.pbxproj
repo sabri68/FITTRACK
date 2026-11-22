@@ -7,20 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04609C21F523731B623FAAF3 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F978F5C6DADB75B250A20 /* Nutrition.swift */; };
+		093141FAA6036AFFE3F20410 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D202457E0CDDC15D6BD08 /* Enums.swift */; };
+		0A0C64923F1FD215310E71DB /* WatchAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48CCD368CE4767ABB9A7F7 /* WatchAppModel.swift */; };
+		0B0927891C89FE557D9E7880 /* SyncPayloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B694DAEDC65E3AD799C23 /* SyncPayloads.swift */; };
+		0BE55CA1561965025BF10855 /* TemplateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6047A2E5C1C95CCD6F4499 /* TemplateDetailView.swift */; };
+		20E1001A0A05E5B7B8894737 /* ProgramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D63FA288DE983FBB18182 /* ProgramCatalog.swift */; };
+		2309B99C16333677952E547F /* WatchViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08378347CD7D4BBF6B8EFF9 /* WatchViews.swift */; };
+		260DBF6225835EC3F7E9B651 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E582FAB05A41720F88677FC /* CameraPicker.swift */; };
+		2844E85D99E5A3D45B4AA0D3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6E5EEE843EAD3308D45C0 /* DashboardView.swift */; };
+		2CF0E1C6A71D08DD303CDAB7 /* ExerciseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB3AA446284661EA6B816E /* ExerciseCatalog.swift */; };
+		3388F9BBE6ED0F3A2EBF778D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23764F161D9901D3C4A379 /* RootView.swift */; };
+		3749A5B7D0B2453D286A7D43 /* FTFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53278710060150AA626012 /* FTFormat.swift */; };
+		3E238802AD8811C7EEBB31A3 /* ErrorReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B678CC37D55F2595873E8C4 /* ErrorReporter.swift */; };
+		3E8260206222E08799A36EBB /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F978F5C6DADB75B250A20 /* Nutrition.swift */; };
+		4606A57AED50E45E9576523F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A52A1D836FE86069682FDD /* Models.swift */; };
+		4BE0E358BE10224D700B2C4A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A52A1D836FE86069682FDD /* Models.swift */; };
+		4EE925F0ED58485EEF7D073E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DABA690E1395F7505A01D /* AppModel.swift */; };
+		4FE63D7B299DF28AC4B10EAE /* ProgramCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D63FA288DE983FBB18182 /* ProgramCatalog.swift */; };
+		57D8959DB3C6B65E0E3F07F9 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2DD12FF8EB72B9CCE232C5 /* DataServiceTests.swift */; };
+		59F069E345CF2AE90B023C4B /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC97BAC93EF8811A3D5EDF /* AddFoodView.swift */; };
 		5B7CA8B5B35D2679E139EFFB /* FitTrackWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D53E8B5D2A655BFC4FAB2 /* FitTrackWatchApp.swift */; };
+		5FE71316470C35FE4B1BBB2E /* FoodLabelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDCF76438C91026470440E3 /* FoodLabelMap.swift */; };
 		633D0464683B5B7F0FE4C3CA /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD8926AF58F0A2E7417262D /* AppInfo.swift */; };
+		67C6B2558CDBD7C472C3D92B /* FTFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53278710060150AA626012 /* FTFormat.swift */; };
+		67CCA556DAE253E6C29ED7E1 /* SyncPayloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B694DAEDC65E3AD799C23 /* SyncPayloads.swift */; };
+		67D48AA883D70BE01566B3FC /* FoodPhotoRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D9BBCF4C8D9A618AACADC /* FoodPhotoRecognizer.swift */; };
+		6BDE94C5E72A78B26F4CFE7A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B407A145F810EAEDF811A15 /* Persistence.swift */; };
+		6EC4BB9585CE32F2C09B4566 /* GenericFoodDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BD6B16D17F3037E66A200 /* GenericFoodDatabase.swift */; };
+		6F81AA4F12560A7114708437 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B398D5B3C8F8CAA60646F4A /* BarcodeScannerView.swift */; };
+		7003C96E46DC07D297A44B86 /* WatchSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A6C325569655BDD87620C /* WatchSyncService.swift */; };
 		706F34F8256159E6EF7A1938 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C87A9514261F6509267A155 /* HealthKit.framework */; };
+		7A420F6DCB7CF5933A4E98C0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D202457E0CDDC15D6BD08 /* Enums.swift */; };
+		7C6693C95A4B9F77DC293C9E /* WorkoutHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CF9C5FFE65DE04564067F /* WorkoutHomeView.swift */; };
+		82FB155AE2F274D3972A67B5 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90143D183862EC051E2502 /* Food.swift */; };
 		85478AA51AFAE836BFDF339E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244432765270D3B5A9324BAD /* Assets.xcassets */; };
 		8722B1B0338F882581566DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B898A0E05D849DEFECF03A /* Assets.xcassets */; };
+		8987E50D7C939F3863ED664C /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C51E7E31785498AED6AE6F /* WorkoutHistoryView.swift */; };
+		8C039E0C553B406220550564 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90143D183862EC051E2502 /* Food.swift */; };
+		9ABA0E4337F638BF2A74CE7F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF578DAF410503AE40F3490 /* DataService.swift */; };
+		9B8F45E4BD58C123BEC7900C /* ProgressDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69808A097E7879A5523EC622 /* ProgressDashboardView.swift */; };
 		9EF9D954E27CF938527112B7 /* FitTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4EEB091B03095E1737120B /* FitTrackApp.swift */; };
+		A176C3E0F3B4B4AF503BD9DD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9662887C961D832268E9A7 /* Components.swift */; };
 		A4CEAFDDBE87A532FD89D84A /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C637F0CA6A273F32F364A8D /* WatchConnectivity.framework */; };
 		A592697C7A5BBEA0C672A54A /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD8926AF58F0A2E7417262D /* AppInfo.swift */; };
+		A5E57A46F0FCD0850906E27C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197BCC2D046A2FA1002A4ABD /* ProfileView.swift */; };
+		B365FD3B2536BAC9FC06BC06 /* ExerciseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB3AA446284661EA6B816E /* ExerciseCatalog.swift */; };
+		B396141C3459A61E5CAD4CB7 /* PhoneSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAF6680D67F1779E24DEE1 /* PhoneSyncService.swift */; };
+		B3AD5A440E5AEE04E80355FD /* OpenFoodFactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587FCD62189A138A3A1E9723 /* OpenFoodFactsClient.swift */; };
+		B6ABF1B9EE0DA2FD8765C0A7 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE604FDD39EC6F05051E89 /* NutritionView.swift */; };
 		B99D6A633108C2D17C7AFC0B /* LaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497101384CB8A946B6413E3D /* LaunchUITests.swift */; };
+		BB7D045CB8625D6C57212A2D /* ActiveWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4A370505E40A086CB370 /* ActiveWorkoutView.swift */; };
+		BE400855D349E21E3F78DB5D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF578DAF410503AE40F3490 /* DataService.swift */; };
 		C0ADDBCA79EC3F7227D2A5AD /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2535C265AEF5E49AD45A6F /* SmokeTests.swift */; };
+		C108C7910C560A033CB9D535 /* RestTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA909E19EC8D9CD1010DEF8C /* RestTimerController.swift */; };
 		C7583A280624E2C4F30B3D2E /* FitTrackWatch.app in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = B8111A1D48406ECDA1841684 /* FitTrackWatch.app */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCD4489F8238A148282B7E36 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C87A9514261F6509267A155 /* HealthKit.framework */; };
+		D25D61F76E5BBD8A18BBBBAF /* FoodServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3A3D5C95303811E6F9BA6 /* FoodServicesTests.swift */; };
+		D53AA4429D9CC3B75949A3E9 /* WatchWorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA60E14730C09C4E480C0565 /* WatchWorkoutManager.swift */; };
+		D5F8751721BFF920F6C41278 /* ErrorReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B678CC37D55F2595873E8C4 /* ErrorReporter.swift */; };
+		D9EEB8BCB62A75893E33BC1D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA653A6DC806303493C850B5 /* OnboardingView.swift */; };
+		DAA99DC90C00C07D18C7297D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D45D8EF2E864CBB382C859B /* Theme.swift */; };
 		DB25CF83E62B2A8F4A296883 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C637F0CA6A273F32F364A8D /* WatchConnectivity.framework */; };
 		DBD44D2075D91C6081DCA053 /* WatchSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3629025B1906BB7EA9BC2 /* WatchSmokeTests.swift */; };
+		DBEB19BE1383511566FECE12 /* WatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C27F6126E7E8A4E4F3685 /* WatchUITests.swift */; };
+		E253BFCEA4970350A6DF48F8 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5ECCE4BD3AF00DD8E7B80 /* HealthKitService.swift */; };
+		E5AA1C108468F52D7CF1831F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B407A145F810EAEDF811A15 /* Persistence.swift */; };
+		E69573D55E16DBD05759A10D /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C937FE9EA71B92108C9AB1F /* Training.swift */; };
+		E84ACE6C93CDA46C0AAB51E8 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDD5EFFAE4D5FD0604BC8B /* ExerciseDetailView.swift */; };
+		EF83769CCC725CBFEE450C23 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C937FE9EA71B92108C9AB1F /* Training.swift */; };
+		FAB33FCFEB324DA93A6027EB /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F8BE668BFD3000C97716A /* DomainTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +86,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D255A6C7D5D446F750DA7FED;
 			remoteInfo = FitTrack;
+		};
+		1221C4D56741AF75390A6311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D5670798217E89438AFDD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 563C6831FBBB8C2021E9C8FB;
+			remoteInfo = FitTrackWatch;
 		};
 		92B18D80BDC783846FA7E977 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -69,21 +132,66 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04CE604FDD39EC6F05051E89 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		053108AC8BBB9B65EBA44741 /* FitTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FitTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CDCF76438C91026470440E3 /* FoodLabelMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLabelMap.swift; sourceTree = "<group>"; };
+		0D6047A2E5C1C95CCD6F4499 /* TemplateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateDetailView.swift; sourceTree = "<group>"; };
+		0FEC97BAC93EF8811A3D5EDF /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		197BCC2D046A2FA1002A4ABD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1B678CC37D55F2595873E8C4 /* ErrorReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorReporter.swift; sourceTree = "<group>"; };
 		244432765270D3B5A9324BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		299DABA690E1395F7505A01D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		2D9662887C961D832268E9A7 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		2E8D53E8B5D2A655BFC4FAB2 /* FitTrackWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackWatchApp.swift; sourceTree = "<group>"; };
 		2FA3629025B1906BB7EA9BC2 /* WatchSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSmokeTests.swift; sourceTree = "<group>"; };
 		37B898A0E05D849DEFECF03A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		381C27F6126E7E8A4E4F3685 /* WatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUITests.swift; sourceTree = "<group>"; };
+		3CDDD5EFFAE4D5FD0604BC8B /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		3D45D8EF2E864CBB382C859B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		432FFE0145EBA7A0B7E69BF7 /* FitTrackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FitTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C51E7E31785498AED6AE6F /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
 		497101384CB8A946B6413E3D /* LaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUITests.swift; sourceTree = "<group>"; };
+		4A6A6C325569655BDD87620C /* WatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncService.swift; sourceTree = "<group>"; };
+		4C23764F161D9901D3C4A379 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		53D6E5EEE843EAD3308D45C0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		587FCD62189A138A3A1E9723 /* OpenFoodFactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsClient.swift; sourceTree = "<group>"; };
+		5B407A145F810EAEDF811A15 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5C937FE9EA71B92108C9AB1F /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		5DD8926AF58F0A2E7417262D /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		69808A097E7879A5523EC622 /* ProgressDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDashboardView.swift; sourceTree = "<group>"; };
+		6B398D5B3C8F8CAA60646F4A /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
 		6C87A9514261F6509267A155 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		6E582FAB05A41720F88677FC /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		7F5B694DAEDC65E3AD799C23 /* SyncPayloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPayloads.swift; sourceTree = "<group>"; };
+		8ADB3AA446284661EA6B816E /* ExerciseCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCatalog.swift; sourceTree = "<group>"; };
 		8C637F0CA6A273F32F364A8D /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		8D3D63FA288DE983FBB18182 /* ProgramCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCatalog.swift; sourceTree = "<group>"; };
+		91E5ECCE4BD3AF00DD8E7B80 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		98A52A1D836FE86069682FDD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9C2535C265AEF5E49AD45A6F /* SmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
+		9F5D202457E0CDDC15D6BD08 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		A08378347CD7D4BBF6B8EFF9 /* WatchViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViews.swift; sourceTree = "<group>"; };
+		A3B3A3D5C95303811E6F9BA6 /* FoodServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServicesTests.swift; sourceTree = "<group>"; };
 		AA4EEB091B03095E1737120B /* FitTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackApp.swift; sourceTree = "<group>"; };
+		AA60E14730C09C4E480C0565 /* WatchWorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWorkoutManager.swift; sourceTree = "<group>"; };
+		AD90143D183862EC051E2502 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		AEF578DAF410503AE40F3490 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B47F8BE668BFD3000C97716A /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		B8111A1D48406ECDA1841684 /* FitTrackWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitTrackWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83D9BBCF4C8D9A618AACADC /* FoodPhotoRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPhotoRecognizer.swift; sourceTree = "<group>"; };
+		BB2CF9C5FFE65DE04564067F /* WorkoutHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHomeView.swift; sourceTree = "<group>"; };
 		D74324365DFFC7BD962C953B /* FitTrackUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FitTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA653A6DC806303493C850B5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DB1531E2E0008385793C6D68 /* FitTrackWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTrackWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE53278710060150AA626012 /* FTFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTFormat.swift; sourceTree = "<group>"; };
+		EA909E19EC8D9CD1010DEF8C /* RestTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimerController.swift; sourceTree = "<group>"; };
+		EBFAF6680D67F1779E24DEE1 /* PhoneSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSyncService.swift; sourceTree = "<group>"; };
 		F14B70983067955ECE8F4A58 /* FitTrackWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTrackWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43F978F5C6DADB75B250A20 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		F44B4A370505E40A086CB370 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
+		FC48CCD368CE4767ABB9A7F7 /* WatchAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppModel.swift; sourceTree = "<group>"; };
+		FE2DD12FF8EB72B9CCE232C5 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		FE4BD6B16D17F3037E66A200 /* GenericFoodDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFoodDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,15 +256,42 @@
 		48D4453129A734BB86C6F6F4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A1B4336EC76A3E249FFDB478 /* Catalog */,
+				F7B673F1C1F576BA9D44855B /* Domain */,
+				FBE2959FC08A7AFB6D7B17C3 /* Formatting */,
+				FDC30C89254C08085BCB2436 /* Models */,
+				CED9E66C1830EB0AB04FDCE8 /* Persistence */,
+				D9B67D03122F98C52C7F18F7 /* Sync */,
 				5DD8926AF58F0A2E7417262D /* AppInfo.swift */,
+				1B678CC37D55F2595873E8C4 /* ErrorReporter.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		4DEF1BF8CBC3D6C8CA29BEB4 /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				0FEC97BAC93EF8811A3D5EDF /* AddFoodView.swift */,
+				04CE604FDD39EC6F05051E89 /* NutritionView.swift */,
+			);
+			path = Nutrition;
+			sourceTree = "<group>";
+		};
+		54309FB939AD8A9368AD6D86 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				0CDCF76438C91026470440E3 /* FoodLabelMap.swift */,
+				FE4BD6B16D17F3037E66A200 /* GenericFoodDatabase.swift */,
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		5725470241F3B7B38F59C870 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				299DABA690E1395F7505A01D /* AppModel.swift */,
 				AA4EEB091B03095E1737120B /* FitTrackApp.swift */,
+				4C23764F161D9901D3C4A379 /* RootView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -165,7 +300,11 @@
 			isa = PBXGroup;
 			children = (
 				5725470241F3B7B38F59C870 /* App */,
+				54309FB939AD8A9368AD6D86 /* Catalog */,
+				C364C51083F44F3147C132A9 /* DesignSystem */,
+				61FE0DA25E3BFFC2DFC4AFAE /* Features */,
 				064E7699B78A79B250EF08C9 /* Resources */,
+				EF67554B44C6C9744992BD00 /* Services */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -174,7 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				AA930286988D8C6054DC4A2E /* App */,
+				FF2B91792F6058786C0F0467 /* Features */,
 				91E2EDFDB766F759551D12AC /* Resources */,
+				7F0EDD7A679564BD75D6C8FF /* Services */,
 			);
 			path = Watch;
 			sourceTree = "<group>";
@@ -185,8 +326,30 @@
 				957125324DB7537891722AD8 /* FitTrackTests */,
 				28A499A3C7DC4DE6C3443467 /* FitTrackUITests */,
 				6F599B73F54625CFC11C3994 /* FitTrackWatchTests */,
+				67E6071A55A434138A2D25B7 /* FitTrackWatchUITests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		61FE0DA25E3BFFC2DFC4AFAE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8FD4002AFA0E3605CD52C /* Dashboard */,
+				4DEF1BF8CBC3D6C8CA29BEB4 /* Nutrition */,
+				DF8ADD152C1B85B4ED2B3939 /* Onboarding */,
+				D2F4C53B583D59B5CD7B4663 /* Profile */,
+				A4AB6E329A41F9B98EE9E171 /* Progress */,
+				A9C5443C63C5AFB83F448D79 /* Workout */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		67E6071A55A434138A2D25B7 /* FitTrackWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				381C27F6126E7E8A4E4F3685 /* WatchUITests.swift */,
+			);
+			path = FitTrackWatchUITests;
 			sourceTree = "<group>";
 		};
 		6F599B73F54625CFC11C3994 /* FitTrackWatchTests */ = {
@@ -195,6 +358,15 @@
 				2FA3629025B1906BB7EA9BC2 /* WatchSmokeTests.swift */,
 			);
 			path = FitTrackWatchTests;
+			sourceTree = "<group>";
+		};
+		7F0EDD7A679564BD75D6C8FF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A6C325569655BDD87620C /* WatchSyncService.swift */,
+				AA60E14730C09C4E480C0565 /* WatchWorkoutManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		91E2EDFDB766F759551D12AC /* Resources */ = {
@@ -208,15 +380,49 @@
 		957125324DB7537891722AD8 /* FitTrackTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE2DD12FF8EB72B9CCE232C5 /* DataServiceTests.swift */,
+				B47F8BE668BFD3000C97716A /* DomainTests.swift */,
+				A3B3A3D5C95303811E6F9BA6 /* FoodServicesTests.swift */,
 				9C2535C265AEF5E49AD45A6F /* SmokeTests.swift */,
 			);
 			path = FitTrackTests;
+			sourceTree = "<group>";
+		};
+		A1B4336EC76A3E249FFDB478 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB3AA446284661EA6B816E /* ExerciseCatalog.swift */,
+				8D3D63FA288DE983FBB18182 /* ProgramCatalog.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		A4AB6E329A41F9B98EE9E171 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				69808A097E7879A5523EC622 /* ProgressDashboardView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		A9C5443C63C5AFB83F448D79 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				F44B4A370505E40A086CB370 /* ActiveWorkoutView.swift */,
+				3CDDD5EFFAE4D5FD0604BC8B /* ExerciseDetailView.swift */,
+				EA909E19EC8D9CD1010DEF8C /* RestTimerController.swift */,
+				0D6047A2E5C1C95CCD6F4499 /* TemplateDetailView.swift */,
+				44C51E7E31785498AED6AE6F /* WorkoutHistoryView.swift */,
+				BB2CF9C5FFE65DE04564067F /* WorkoutHomeView.swift */,
+			);
+			path = Workout;
 			sourceTree = "<group>";
 		};
 		AA930286988D8C6054DC4A2E /* App */ = {
 			isa = PBXGroup;
 			children = (
 				2E8D53E8B5D2A655BFC4FAB2 /* FitTrackWatchApp.swift */,
+				FC48CCD368CE4767ABB9A7F7 /* WatchAppModel.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -229,8 +435,107 @@
 				D74324365DFFC7BD962C953B /* FitTrackUITests.xctest */,
 				B8111A1D48406ECDA1841684 /* FitTrackWatch.app */,
 				F14B70983067955ECE8F4A58 /* FitTrackWatchTests.xctest */,
+				DB1531E2E0008385793C6D68 /* FitTrackWatchUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C364C51083F44F3147C132A9 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2D9662887C961D832268E9A7 /* Components.swift */,
+				3D45D8EF2E864CBB382C859B /* Theme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		CED9E66C1830EB0AB04FDCE8 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				AEF578DAF410503AE40F3490 /* DataService.swift */,
+				5B407A145F810EAEDF811A15 /* Persistence.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D2F4C53B583D59B5CD7B4663 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				197BCC2D046A2FA1002A4ABD /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D3B8FD4002AFA0E3605CD52C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				53D6E5EEE843EAD3308D45C0 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D9B67D03122F98C52C7F18F7 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				7F5B694DAEDC65E3AD799C23 /* SyncPayloads.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		DF8ADD152C1B85B4ED2B3939 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DA653A6DC806303493C850B5 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EF67554B44C6C9744992BD00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6B398D5B3C8F8CAA60646F4A /* BarcodeScannerView.swift */,
+				6E582FAB05A41720F88677FC /* CameraPicker.swift */,
+				B83D9BBCF4C8D9A618AACADC /* FoodPhotoRecognizer.swift */,
+				91E5ECCE4BD3AF00DD8E7B80 /* HealthKitService.swift */,
+				587FCD62189A138A3A1E9723 /* OpenFoodFactsClient.swift */,
+				EBFAF6680D67F1779E24DEE1 /* PhoneSyncService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F7B673F1C1F576BA9D44855B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AD90143D183862EC051E2502 /* Food.swift */,
+				F43F978F5C6DADB75B250A20 /* Nutrition.swift */,
+				5C937FE9EA71B92108C9AB1F /* Training.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FBE2959FC08A7AFB6D7B17C3 /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				DE53278710060150AA626012 /* FTFormat.swift */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		FDC30C89254C08085BCB2436 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D202457E0CDDC15D6BD08 /* Enums.swift */,
+				98A52A1D836FE86069682FDD /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF2B91792F6058786C0F0467 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A08378347CD7D4BBF6B8EFF9 /* WatchViews.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +635,24 @@
 			productReference = 053108AC8BBB9B65EBA44741 /* FitTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EC1EA7CA7422D0E54864C435 /* FitTrackWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0498B988B977B322C0DCD3D7 /* Build configuration list for PBXNativeTarget "FitTrackWatchUITests" */;
+			buildPhases = (
+				60A6008678D07418472C123A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFDCCD8ADF23D6FA419A8F4E /* PBXTargetDependency */,
+			);
+			name = FitTrackWatchUITests;
+			packageProductDependencies = (
+			);
+			productName = FitTrackWatchUITests;
+			productReference = DB1531E2E0008385793C6D68 /* FitTrackWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -360,6 +683,11 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
+					EC1EA7CA7422D0E54864C435 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 563C6831FBBB8C2021E9C8FB;
+					};
 				};
 			};
 			buildConfigurationList = 2DE973B4615ED6F7AD148BC7 /* Build configuration list for PBXProject "FitTrack" */;
@@ -381,6 +709,7 @@
 				433569BA267C96770B72091E /* FitTrackTests */,
 				C840FA747C462FE4F52104E7 /* FitTrackUITests */,
 				3449B61E2A1C6CBABD34AFC6 /* FitTrackWatchTests */,
+				EC1EA7CA7422D0E54864C435 /* FitTrackWatchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +738,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D8959DB3C6B65E0E3F07F9 /* DataServiceTests.swift in Sources */,
+				FAB33FCFEB324DA93A6027EB /* DomainTests.swift in Sources */,
+				D25D61F76E5BBD8A18BBBBAF /* FoodServicesTests.swift in Sources */,
 				C0ADDBCA79EC3F7227D2A5AD /* SmokeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,8 +757,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7D045CB8625D6C57212A2D /* ActiveWorkoutView.swift in Sources */,
+				59F069E345CF2AE90B023C4B /* AddFoodView.swift in Sources */,
 				A592697C7A5BBEA0C672A54A /* AppInfo.swift in Sources */,
+				4EE925F0ED58485EEF7D073E /* AppModel.swift in Sources */,
+				6F81AA4F12560A7114708437 /* BarcodeScannerView.swift in Sources */,
+				260DBF6225835EC3F7E9B651 /* CameraPicker.swift in Sources */,
+				A176C3E0F3B4B4AF503BD9DD /* Components.swift in Sources */,
+				2844E85D99E5A3D45B4AA0D3 /* DashboardView.swift in Sources */,
+				BE400855D349E21E3F78DB5D /* DataService.swift in Sources */,
+				093141FAA6036AFFE3F20410 /* Enums.swift in Sources */,
+				D5F8751721BFF920F6C41278 /* ErrorReporter.swift in Sources */,
+				B365FD3B2536BAC9FC06BC06 /* ExerciseCatalog.swift in Sources */,
+				E84ACE6C93CDA46C0AAB51E8 /* ExerciseDetailView.swift in Sources */,
+				67C6B2558CDBD7C472C3D92B /* FTFormat.swift in Sources */,
 				9EF9D954E27CF938527112B7 /* FitTrackApp.swift in Sources */,
+				82FB155AE2F274D3972A67B5 /* Food.swift in Sources */,
+				5FE71316470C35FE4B1BBB2E /* FoodLabelMap.swift in Sources */,
+				67D48AA883D70BE01566B3FC /* FoodPhotoRecognizer.swift in Sources */,
+				6EC4BB9585CE32F2C09B4566 /* GenericFoodDatabase.swift in Sources */,
+				E253BFCEA4970350A6DF48F8 /* HealthKitService.swift in Sources */,
+				4BE0E358BE10224D700B2C4A /* Models.swift in Sources */,
+				3E8260206222E08799A36EBB /* Nutrition.swift in Sources */,
+				B6ABF1B9EE0DA2FD8765C0A7 /* NutritionView.swift in Sources */,
+				D9EEB8BCB62A75893E33BC1D /* OnboardingView.swift in Sources */,
+				B3AD5A440E5AEE04E80355FD /* OpenFoodFactsClient.swift in Sources */,
+				6BDE94C5E72A78B26F4CFE7A /* Persistence.swift in Sources */,
+				B396141C3459A61E5CAD4CB7 /* PhoneSyncService.swift in Sources */,
+				A5E57A46F0FCD0850906E27C /* ProfileView.swift in Sources */,
+				4FE63D7B299DF28AC4B10EAE /* ProgramCatalog.swift in Sources */,
+				9B8F45E4BD58C123BEC7900C /* ProgressDashboardView.swift in Sources */,
+				C108C7910C560A033CB9D535 /* RestTimerController.swift in Sources */,
+				3388F9BBE6ED0F3A2EBF778D /* RootView.swift in Sources */,
+				0B0927891C89FE557D9E7880 /* SyncPayloads.swift in Sources */,
+				0BE55CA1561965025BF10855 /* TemplateDetailView.swift in Sources */,
+				DAA99DC90C00C07D18C7297D /* Theme.swift in Sources */,
+				E69573D55E16DBD05759A10D /* Training.swift in Sources */,
+				8987E50D7C939F3863ED664C /* WorkoutHistoryView.swift in Sources */,
+				7C6693C95A4B9F77DC293C9E /* WorkoutHomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60A6008678D07418472C123A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBEB19BE1383511566FECE12 /* WatchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +811,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				633D0464683B5B7F0FE4C3CA /* AppInfo.swift in Sources */,
+				9ABA0E4337F638BF2A74CE7F /* DataService.swift in Sources */,
+				7A420F6DCB7CF5933A4E98C0 /* Enums.swift in Sources */,
+				3E238802AD8811C7EEBB31A3 /* ErrorReporter.swift in Sources */,
+				2CF0E1C6A71D08DD303CDAB7 /* ExerciseCatalog.swift in Sources */,
+				3749A5B7D0B2453D286A7D43 /* FTFormat.swift in Sources */,
 				5B7CA8B5B35D2679E139EFFB /* FitTrackWatchApp.swift in Sources */,
+				8C039E0C553B406220550564 /* Food.swift in Sources */,
+				4606A57AED50E45E9576523F /* Models.swift in Sources */,
+				04609C21F523731B623FAAF3 /* Nutrition.swift in Sources */,
+				E5AA1C108468F52D7CF1831F /* Persistence.swift in Sources */,
+				20E1001A0A05E5B7B8894737 /* ProgramCatalog.swift in Sources */,
+				67CCA556DAE253E6C29ED7E1 /* SyncPayloads.swift in Sources */,
+				EF83769CCC725CBFEE450C23 /* Training.swift in Sources */,
+				0A0C64923F1FD215310E71DB /* WatchAppModel.swift in Sources */,
+				7003C96E46DC07D297A44B86 /* WatchSyncService.swift in Sources */,
+				2309B99C16333677952E547F /* WatchViews.swift in Sources */,
+				D53AA4429D9CC3B75949A3E9 /* WatchWorkoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +862,11 @@
 			target = 563C6831FBBB8C2021E9C8FB /* FitTrackWatch */;
 			targetProxy = 92B18D80BDC783846FA7E977 /* PBXContainerItemProxy */;
 		};
+		AFDCCD8ADF23D6FA419A8F4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 563C6831FBBB8C2021E9C8FB /* FitTrackWatch */;
+			targetProxy = 1221C4D56741AF75390A6311 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -491,6 +888,21 @@
 			};
 			name = Release;
 		};
+		2D153D2D877694D536847EA1 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Watch/FitTrackWatch.entitlements;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp;
+				PRODUCT_NAME = FitTrackWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = "Debug-iCloud";
+		};
 		34ACA5F35B812A7DA184ABF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +921,42 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		355E317E7C3E3543310BF2CB /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.uitests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = FitTrackWatch;
+			};
+			name = "Release-iCloud";
+		};
+		49B02FB2D7926F923E3E929C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.uitests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = FitTrackWatch;
 			};
 			name = Release;
 		};
@@ -559,6 +1007,40 @@
 			};
 			name = Release;
 		};
+		6C9771CF0057B84DA9413ED2 /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitTrack;
+			};
+			name = "Release-iCloud";
+		};
+		6FC6A9B70CBB58C4D0AC3DA3 /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitTrack.app/FitTrack";
+			};
+			name = "Release-iCloud";
+		};
 		7B5F819EAB30A48B1D7E1B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -576,6 +1058,94 @@
 			};
 			name = Debug;
 		};
+		873A4548E6557F655F5D6C74 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitTrack;
+			};
+			name = "Debug-iCloud";
+		};
+		88BFD9F159AE0299F177DEDC /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = "Debug-iCloud";
+		};
 		898808DA5013CECC6C9C5D80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,6 +1162,143 @@
 				TEST_TARGET_NAME = FitTrack;
 			};
 			name = Release;
+		};
+		8B522A3A49E8A6F98934F057 /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = "Release-iCloud";
+		};
+		9CE90379082346F6B0EBC54A /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/FitTrack.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack;
+				PRODUCT_NAME = FitTrack;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) FITTRACK_ICLOUD";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release-iCloud";
+		};
+		A98AA410B0BAA5FB9B449175 /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.tests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitTrackWatch.app/FitTrackWatch";
+			};
+			name = "Release-iCloud";
+		};
+		B382F7DF5D5C6174286D26C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.uitests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = FitTrackWatch;
+			};
+			name = Debug;
+		};
+		B55CEA003D913297E4901A2A /* Release-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Watch/FitTrackWatch.entitlements;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp;
+				PRODUCT_NAME = FitTrackWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = "Release-iCloud";
 		};
 		C3C7D85B3B9A0EBDFA76DB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -766,6 +1473,42 @@
 			};
 			name = Debug;
 		};
+		F39C62231225884ECE5A8DE4 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.tests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitTrackWatch.app/FitTrackWatch";
+			};
+			name = "Debug-iCloud";
+		};
+		F3C19FBDB6162EC33F2C5527 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.watchkitapp.uitests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = FitTrackWatch;
+			};
+			name = "Debug-iCloud";
+		};
 		F6A4A2922120615CB62BE7E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -784,14 +1527,66 @@
 			};
 			name = Debug;
 		};
+		FB7057943F46075451044AE8 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitTrack.app/FitTrack";
+			};
+			name = "Debug-iCloud";
+		};
+		FFB8E1DAC97AF352978B5944 /* Debug-iCloud */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/FitTrack.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sabri68.fittrack;
+				PRODUCT_NAME = FitTrack;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) FITTRACK_ICLOUD";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug-iCloud";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0498B988B977B322C0DCD3D7 /* Build configuration list for PBXNativeTarget "FitTrackWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B382F7DF5D5C6174286D26C3 /* Debug */,
+				F3C19FBDB6162EC33F2C5527 /* Debug-iCloud */,
+				49B02FB2D7926F923E3E929C /* Release */,
+				355E317E7C3E3543310BF2CB /* Release-iCloud */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		2DE973B4615ED6F7AD148BC7 /* Build configuration list for PBXProject "FitTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3C7D85B3B9A0EBDFA76DB0B /* Debug */,
+				88BFD9F159AE0299F177DEDC /* Debug-iCloud */,
 				C61039398119BC5109C7E733 /* Release */,
+				8B522A3A49E8A6F98934F057 /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -800,7 +1595,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D60881288F76F107A4D6400 /* Debug */,
+				2D153D2D877694D536847EA1 /* Debug-iCloud */,
 				6A2F101B4423BA8821F5F697 /* Release */,
+				B55CEA003D913297E4901A2A /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -809,7 +1606,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A37BA102760A2265CAC651C /* Debug */,
+				873A4548E6557F655F5D6C74 /* Debug-iCloud */,
 				898808DA5013CECC6C9C5D80 /* Release */,
+				6C9771CF0057B84DA9413ED2 /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -818,7 +1617,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5967CF56F8F3C8078B379C1 /* Debug */,
+				FFB8E1DAC97AF352978B5944 /* Debug-iCloud */,
 				34ACA5F35B812A7DA184ABF5 /* Release */,
+				9CE90379082346F6B0EBC54A /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -827,7 +1628,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6A4A2922120615CB62BE7E4 /* Debug */,
+				F39C62231225884ECE5A8DE4 /* Debug-iCloud */,
 				282F30D70692F8A2D0F063C2 /* Release */,
+				A98AA410B0BAA5FB9B449175 /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -836,7 +1639,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B5F819EAB30A48B1D7E1B65 /* Debug */,
+				FB7057943F46075451044AE8 /* Debug-iCloud */,
 				D02ECFC382A3344B822F06CB /* Release */,
+				6FC6A9B70CBB58C4D0AC3DA3 /* Release-iCloud */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
