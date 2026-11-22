@@ -31,7 +31,7 @@ struct ActiveWorkoutView: View {
                     } label: {
                         Label("Ajouter un exercice", systemImage: "plus.circle.fill")
                     }
-                    .accessibilityIdentifier("active.addExercise")
+                    .accessibilityIdentifier("active.addExerciseBottom")
                 }
             }
             .listStyle(.insetGrouped)
@@ -46,6 +46,15 @@ struct ActiveWorkoutView: View {
                     }
                     .accessibilityLabel("Réduire")
                     .accessibilityIdentifier("active.minimize")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showPicker = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .accessibilityLabel("Ajouter un exercice")
+                    .accessibilityIdentifier("active.addExercise")
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Terminer") { showFinishDialog = true }

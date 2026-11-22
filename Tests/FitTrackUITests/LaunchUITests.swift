@@ -69,7 +69,13 @@ final class FitTrackUITests: XCTestCase {
 
         app.buttons["workout.library"].tap()
         XCTAssertTrue(app.navigationBars["Bibliothèque"].waitForExistence(timeout: 5))
-        app.staticTexts["Squat barre"].firstMatch.tap()
+        let librarySearch = app.searchFields.firstMatch
+        XCTAssertTrue(librarySearch.waitForExistence(timeout: 5))
+        librarySearch.tap()
+        librarySearch.typeText("Squat")
+        let squat = app.staticTexts["Squat barre"].firstMatch
+        XCTAssertTrue(squat.waitForExistence(timeout: 5))
+        squat.tap()
         XCTAssertTrue(app.staticTexts["Exécution"].waitForExistence(timeout: 5))
         screenshot(app, "07-Fiche-exercice")
 
@@ -169,6 +175,9 @@ final class FitTrackUITests: XCTestCase {
             XCTAssertTrue(field.waitForExistence(timeout: 3), "Champ \(id) introuvable")
             field.tap()
             field.typeText(value)
+            // Close the keyboard so the next field is not hidden behind it.
+            let ok = app.toolbars.buttons["OK"].firstMatch
+            if ok.waitForExistence(timeout: 2) { ok.tap() }
         }
         app.swipeUp()
         app.buttons["manual.continue"].tap()
